@@ -43,4 +43,4 @@ sh pcap2csv.sh service_name video_type
 
 An each filename in the above includes service labels.
 
-A dataset on flow basis, which includes OSINT (Open Source INTelligence) data and Routing Infomation data, will be public soon.
+A dataset on a flow basis, which includes OSINT (Open Source INTelligence) data and Routing Infomation data, will be public soon.
