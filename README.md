@@ -20,7 +20,7 @@ Create a file to save the TLS key in advance and write it into bash.
 touch /home/user/tls_key.log
 echo 'export SSLKEYLOGFILE="$HOME/tls_key.log"' >> ~/.bashrc
 echo 'export PATH=$PATH:/home/user/.local/bin' >> ~/.bashrc
-source .bashrc
+source ~/.bashrc
 ```
 
 Move to the 'manual' directory and create a directory to save the generated pcap files.
