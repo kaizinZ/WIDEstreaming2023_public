@@ -39,4 +39,8 @@ sh pcap2csv.sh service_name video_type
 ```
 
 # Dataset
-The dataset will be published once completed.
+[Raw dataset](https://drive.google.com/drive/folders/17dYY7POuN2-8fTw8hxO6VPtW8BD2Lvdm?usp=sharing)
+
+An each filename in the above includes service labels.
+
+A dataset on flow basis, which includes OSINT (Open Source INTelligence) data and Routing Infomation data, will be public soon.
