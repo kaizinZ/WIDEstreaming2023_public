@@ -25,17 +25,17 @@ source .bashrc
 
 Move to the 'manual' directory and create a directory to save the generated pcap files.
 ```
-python3 make_folder.py
+python3 make_folders.py
 ```
 
 Operate the program and then watch the videos, refer to streaming.py for the arguments.
 ```
-python3 streaming.py -s netflix -u user_name -t anime
+python3 streaming.py -s service_name -u user_name -t video_type
 ```
 
 Convert pcap files to csv.
 ```
-sh pcap2csv.sh netflix anime
+sh pcap2csv.sh service_name video_type
 ```
 
 # Dataset
