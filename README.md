@@ -38,9 +38,29 @@ Convert pcap files to csv.
 sh pcap2csv.sh service_name video_type
 ```
 
-# Dataset
+## Dataset
 [Raw dataset](https://drive.google.com/drive/folders/17dYY7POuN2-8fTw8hxO6VPtW8BD2Lvdm?usp=sharing)
 
 An each filename in the above includes service labels.
 
 A dataset on a flow basis, which includes OSINT (Open Source INTelligence) data and Routing Infomation data, will be public soon.
+
+
+## Scenario (Set by Application Type)
+- Streaming
+  - Video Viewing (PGC)
+    - Assume video durations typical for anime (20-30 minutes), drama (40-60 minutes), and movies (around 120 minutes). Not all videos are watched in full; viewing is stopped at random times:
+    - 50% of the time, stop at a random moment.
+    - 50% of the time, watch the entire video.
+  - Video Viewing (UGC)
+    - The duration of user-generated content is unknown, hence timing is completely random:
+    - YouTube:
+      - Short: 0-15 minutes, completely random.
+      - Live: 0-60 minutes, completely random.
+      - Zapping, UGC: 0-30 minutes, completely random.
+    - TikTok: 0-30 minutes, completely random.
+      - Primarily short video-focused service.
+      - Includes live content.
+- Downloads and File System
+  - File sizes range from approximately 10KB to 250MB.
+  - Includes uploading, downloading, and both.
