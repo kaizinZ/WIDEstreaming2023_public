@@ -17,12 +17,12 @@ max_process = 4
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', '--type', choices=['download', 'upload', 'both'], required=True)
 parser.add_argument('-u', '--user', type=str, default='')
-parser.add_argument('-s', '--service', required=True, choices=["google_drive", "dropbox", "fast.com", "box"])
+parser.add_argument('-s', '--service', required=True, choices=["google_drive", "dropbox", "fast", "box"])
 #parser.add_argument('-f', '--file', type=str)
 parser.add_argument('-p', '--profile', type=int, default=0)
 parser.add_argument('-o', '--offset', type=int, default=0)
 
-services = ["google drive", "dropbox", "fast.com", "box"]
+services = ["google_drive", "dropbox", "fast", "box"]
 
 
 def make_driver(user_name, profile):
@@ -46,7 +46,7 @@ def make_driver(user_name, profile):
     
 
 def generate_file_name(service_name: str, action_type: str, offset=0):
-    os.chdir(f'../../src/{service_name}/pcap')
+    os.chdir(f'../data/{service_name}/pcap')
     pcap_path = os.getcwd()
 
     # ディレクトリ内の全てのファイルとサブディレクトリをリスト化

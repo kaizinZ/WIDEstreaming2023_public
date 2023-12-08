@@ -14,9 +14,9 @@ service=$1
 video_type=$2
 
 # コマンドを実行するディレクトリ
-input_dir="../../src/${service}/pcap"
-output_dir1="../../src/${service}/pkt_csv"
-output_dir2="../../src/${service}/flow_csv"
+input_dir="../data/${service}/pcap"
+output_dir1="../data/${service}/pkt_csv"
+output_dir2="../data/${service}/flow_csv"
 
 # インデックスをインクリメントしながらファイルを処理
 index=0

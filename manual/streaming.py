@@ -91,7 +91,7 @@ def random_stop_minutes(type: str, service_name: str):
 
 
 def generate_file_name(service_name: str, video_type: str, offset=0):
-    os.chdir(f'../../src/{service_name}/pcap')
+    os.chdir(f'../data/{service_name}/pcap')
     pcap_path = os.getcwd()
 
     # ディレクトリ内の全てのファイルとサブディレクトリをリスト化
