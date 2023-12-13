@@ -35,7 +35,7 @@ python3 streaming.py -s service_name -u user_name -t video_type
 
 Convert pcap files to csv.
 ```
-sh pcap2csv.sh service_name video_type
+bash pcap2csv.sh service_name video_type
 ```
 
 ## Dataset
