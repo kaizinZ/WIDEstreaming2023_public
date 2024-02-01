@@ -44,8 +44,8 @@ bash pcap2csv.sh service_name video_type
 An each filename in the above includes service labels.
 
 ~~A dataset on a flow basis, which includes OSINT (Open Source INTelligence) data and Routing Infomation data, will be public soon.~~
-[Flow dataset](https://drive.google.com/drive/folders/1UFEem5v-rOZEFKexTe8wqmMqWK6osmwV?usp=drive_link)
 
+[Flow dataset](https://drive.google.com/drive/folders/1UFEem5v-rOZEFKexTe8wqmMqWK6osmwV?usp=drive_link)
 
 ## Scenario (Set by Application Type)
 - Streaming
@@ -65,3 +65,26 @@ An each filename in the above includes service labels.
 - Downloads and File System
   - File sizes range from approximately 10KB to 250MB.
   - Includes uploading, downloading, and both.
+
+
+## Flow dataset attributes
+- srcip: client machine's IP address
+- dstip: server machine's IP address
+- proto: protocol number
+- bytes_r/s: transmitted traffic volume from server to client / client to server
+- bytes_r_max: maximum flow volume of BoF (Bag-of-Flows, aggregated with 4-tuple(srcip, dstip, proto, dstport=443).)
+- first: session start time
+- last: session end time
+- pkts_r/s: transmitted traffic volume from server to client / client to server
+- count: the number of flows within BoF
+- ss_time: session duration
+- loss, recon_loss, kl_loss: output of our model
+- sni: server name indication
+- osint_asn: AS number obtained　from [Shodan](https://www.shodan.io/)
+- cn: common name obtained　from [Shodan](https://www.shodan.io/)
+- san: subject alternative name obtained　from [Shodan](https://www.shodan.io/)
+- org: organization name obtained　from [Shodan](https://www.shodan.io/)
+- net: prefix obtained　from our BGP RIB
+- osint_service: serivice name tied with osint data
+- sid: service identification (1: netflix, 2: AmazonPrimeVideo, 3: YouTube, 4: Hulu, 5: Disneyplus, 6: Twitch, 7: TikTok)
+- osint_sid: sid indentified by osint data
