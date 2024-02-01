@@ -32,7 +32,7 @@ while true; do
   fi
 
   # packet
-  tshark -r "${input_dir}/${file_name}" -E header=y -E separator=, -T fields -e ip.src -e ip.dst -e ip.proto -e ip.hdr_len -e ip.dsfield.ecn -e ip.len -e ip.id -e ip.frag_offset -e ip.ttl -e ip.checksum -e tcp.srcport -e tcp.dstport -e tcp.hdr_len -e tcp.len -e tcp.seq -e tcp.ack -e tcp.flags.ns -e tcp.flags.fin -e tcp.window_size_value -e tcp.checksum -e tcp.urgent_pointer -e tcp.option_kind -e tcp.option_len -e tcp.options.timestamp.tsval -e tcp.options.timestamp.tsecr -e udp.srcport -e udp.dstport -e udp.length -e udp.checksum -e gquic.puflags.rsv -e tls.handshake.extensions_server_name -o "tls.keylog_file:$HOME/tls_key.log" > "${output_dir1}/${base_name}.csv"
+  tshark -r "${input_dir}/${file_name}" -E header=y -E separator=, -T fields -e ip.src -e ip.dst -e ip.proto -e ip.hdr_len -e ip.dsfield.ecn -e ip.len -e ip.id -e ip.frag_offset -e ip.ttl -e ip.checksum -e tcp.srcport -e tcp.dstport -e tcp.hdr_len -e tcp.len -e tcp.seq -e tcp.ack -e tcp.flags.ns -e tcp.flags.fin -e tcp.window_size_value -e tcp.checksum -e tcp.urgent_pointer -e tcp.options.timestamp.tsval -e tcp.options.timestamp.tsecr -e udp.srcport -e udp.dstport -e udp.length -e udp.checksum -e gquic.puflags.rsv -e tls.handshake.extensions_server_name -o "tls.keylog_file:$HOME/tls_key.log" > "${output_dir1}/${base_name}.csv"
   
   # flow
   tshark -r "${input_dir}/${file_name}" -E header=y -E separator=, -T fields -e frame.time_epoch -e ip.src -e ip.dst -e tcp.srcport -e tcp.dstport -e ip.proto -e udp.srcport -e udp.dstport -e tls.handshake.extensions_server_name -Y "tls" -o "tls.keylog_file:$HOME/tls_key.log" > "${output_dir2}/${base_name}.csv"
