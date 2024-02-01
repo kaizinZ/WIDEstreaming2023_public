@@ -50,6 +50,8 @@ An each filename in the above includes service labels.
 
 [Flow dataset](https://drive.google.com/drive/folders/1UFEem5v-rOZEFKexTe8wqmMqWK6osmwV?usp=drive_link)
 
+Flow dataset includes only video services.
+
 ## Scenario (Set by Application Type)
 - Streaming
   - Video Viewing (PGC)
