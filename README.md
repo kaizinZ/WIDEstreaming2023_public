@@ -1,6 +1,9 @@
 # WIDEstreaming2023_public
 The goal is to collect traffic centered around streaming services and create a dataset. Considering the terms of service for each service, data collection is semi-automated. Instead of scraping or crawling, videos are played manually.
 
+Video services included in the dataset are netflix, AmazonPrimeVideo, YouTube, Hulu, Disneyplus, Twitch, and TikTok.
+Other services are Dropbox, Box, Fast.com, and Google Drive.
+
 ## Environment
 
 - Ubuntu 20.04.6 LTS
@@ -81,7 +84,7 @@ An each filename in the above includes service labels.
 - loss, recon_loss, kl_loss: output of our model
 - sni: server name indication
 - osint_asn: AS number obtained　from [Shodan](https://www.shodan.io/)
-- cn: common name obtained　from [Shodan](https://www.shodan.io/)
+- cn: common name obtained from [Shodan](https://www.shodan.io/)
 - san: subject alternative name obtained　from [Shodan](https://www.shodan.io/)
 - org: organization name obtained　from [Shodan](https://www.shodan.io/)
 - net: prefix obtained　from our BGP RIB
